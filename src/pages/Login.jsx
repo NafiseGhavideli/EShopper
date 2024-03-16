@@ -1,0 +1,27 @@
+import { useState } from "react"
+
+function Login() {
+  const [email,setEmail]=useState("test@gmail.com")
+  const [password,setPassword]=useState("123")
+
+  function handleSubmit(e){
+    e.preventDefault();
+    // console.log("Loged in")
+  }
+  return (
+    <form className="relative">
+
+    <div className="border border-neutral-100 p-12 rounded-sm flex flex-col absolute top-1/3 left-1/2 -translate-x-1/2 gap-4">
+      <input type="email" value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="border-neutral-200 border font-poppins rounded-lg p-3 focus:ring-2 ring-rose-500 "/>
+      <input type="password" value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="border-neutral-200 border font-poppins rounded-lg p-3 focus:ring-2 focus:ring-rose-500 "/>
+      <button className="font-poppins font-semibold bg-rose-100 p-3 rounded-lg " onClick={(e)=>handleSubmit(e)}>Log in</button>
+    </div>
+          </form>
+  )
+}
+
+export default Login
