@@ -2,7 +2,6 @@ import { useRouteError } from "react-router-dom";
 
  function Error() {
   const error = useRouteError();
-  console.error(error);
 
   return (
     <div id="error-page" className="font-poppins border-neutral-100 top-1/2 left-1/2 absolute -translate-x-1/2">

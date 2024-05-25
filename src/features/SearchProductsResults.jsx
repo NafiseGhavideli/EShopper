@@ -1,18 +1,20 @@
 import { useLoaderData, useSearchParams } from "react-router-dom";
 import { getProducts } from "../services/apiProducts";
 import ProductsItem from "./products/ProductsItem ";
-import Empty from "../ui/Empty";
 
 function SearchProductsResults() {
   const products = useLoaderData()
   const [searchParams]= useSearchParams()
   const query=searchParams.get("search")
+  let items =[];
+  
+  products.map(item=>item.title.toLowerCase().includes(query) && items.push(item))
 
   return (
-    <div className="grid grid-cols-4">
-    <div className="" >
-     {products.map(item=>item.title.toLowerCase()===query&&<ProductsItem item={item} key={item.id}/>)}
-    </div>
+    <div className="grid grid-cols-4 gap-x-24 gap-y-6 grow" >
+     
+     {items && items.map(item=><ProductsItem item={item} key={item.id}/>)}
+
     </div>
   )
 }
