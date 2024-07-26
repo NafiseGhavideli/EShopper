@@ -1,6 +1,6 @@
 function Logo() {
   return (
-    <p className="font-poppins text-5xl font-bold my-5">
+    <p className="font-poppins xsm:text-4xl sm:text-5xl font-bold">
       <span className="font-bold text-5xl text-rose-500 pr-3 pl-3 border ">
         E
       </span>

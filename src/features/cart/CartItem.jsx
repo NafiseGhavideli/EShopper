@@ -14,15 +14,15 @@ function CartItem({item,index}) {
     dispatch(deleteItem(productId))
   }
   return (
-    <li className="flex items-center justify-between font-poppins p-3">
-      <div className="flex items-center justify-between gap-6">
+    <li className="flex items-center justify-between font-poppins py-3">
+      <div className="flex items-center justify-between gap-4">
       <span>{index+1}</span>
         <img src={image} alt={title} className="max-h-20 max-w-16 " />
+        <p className="lg:text-base text-xs px-4">{title}</p>
         </div>
-        <p className="px-4">{title}</p>
 
     <div className="flex items-center justify-between gap-6 ">
-      <p className="text-md font-semibold">${price}</p>
+      <p className="md:text-base text-xs font-semibold">${price}</p>
     <button onClick={handleDeleteItem}><HiOutlineXCircle /></button>
     </div>
   </li>

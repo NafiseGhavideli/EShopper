@@ -6,12 +6,11 @@ function Login() {
 
   function handleSubmit(e){
     e.preventDefault();
-    // console.log("Loged in")
   }
   return (
     <form className="relative">
 
-    <div className="border border-neutral-100 p-12 rounded-sm flex flex-col absolute top-1/3 left-1/2 -translate-x-1/2 gap-4">
+    <div className="text-xs md:text-base border border-neutral-200 p-12 rounded-sm flex flex-col absolute top-1/3 left-1/2 -translate-x-1/2 gap-4 shadow-sm">
       <input type="email" value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="border-neutral-200 border font-poppins rounded-lg p-3 focus:ring-2 ring-rose-500 "/>

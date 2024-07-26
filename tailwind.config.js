@@ -4,6 +4,15 @@ export default {
   theme: {
     fontFamily: { poppins: "Poppins, sans-serif" },
     extend: {},
+    screens: {
+      'xsm': '300px',
+      'sm': '730px',
+      'md': '800px',
+      'lg': '1100px',
+      'xl': '1280px',
+      '2xl': '1536px',
+
+    }
   },
   plugins: [],
 };

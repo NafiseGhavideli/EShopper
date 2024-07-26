@@ -17,7 +17,7 @@ function Categories() {
     }
     return (
       <select
-        className="px-12 py-3 mt-4 cursor-pointer bg-rose-50 font-poppins rounded-md border-none text-lg font-medium"
+        className="lg:px-10 py-3 px-8 cursor-pointer bg-rose-50 font-poppins rounded-md border-none lg:text-base text-sm lg:font-medium"
         value={currentCategory || "categories"}
         onChange={(e) => handleCategories(e.target.value)}
       >

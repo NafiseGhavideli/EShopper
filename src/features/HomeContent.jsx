@@ -4,8 +4,8 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 function HomeContent() {
   const [currentImg, setCurrentImg] = useState(0);
   const imgSlides = [
-    { id: 0, imgSrc: "../../public/img/carousel-1.jpg" ,title:'10% Off Your First Order', caption:'Fashionable Dress' },
-    { id: 1, imgSrc: "../../public/img/carousel-2.jpg" ,title:'10% Off Your First Order', caption:'Reasonable Price'},
+    { id: 0, imgSrc: "../../public/carousel-1.jpg" ,title:'10% Off Your First Order', caption:'Fashionable Dress' },
+    { id: 1, imgSrc: "../../public/carousel-2.jpg" ,title:'10% Off Your First Order', caption:'Reasonable Price'},
   ];
 
   function handlePrev() {
@@ -16,35 +16,34 @@ function HomeContent() {
   }
 
   return (
-    <div className="relative">
+    <>
+      <div>
       <button
         onClick={()=>handlePrev()}
-        className="absolute top-1/2 mx-4 text-stone-50 z-10">
+        className="absolute top-1/2 mx-8 text-stone-50 z-10">
         <HiChevronLeft />
       </button>
-      <div className="object-scale-down">
-        {imgSlides.map(
-          (img, i) =>
-            currentImg === i && (
-              <img src={img.imgSrc} key={i} className="object-cover h-96 w-min brightness-50" />
-            )
-        )}
-      </div>
 
-      <p className=" font-poppins text-xl font-semibold uppercase absolute inset-y-1/3 left-1/2 text-stone-50 -translate-x-1/2">
-        {imgSlides[currentImg].title}
-      </p>
-      <p className=" font-poppins text-5xl font-black absolute top-1/2 left-1/2 text-stone-50 -translate-x-1/2 ">
-        {imgSlides[currentImg].caption}
-      </p>
 
+        {imgSlides.map((img) => img.id ===currentImg &&<img src={`/carousel-${img.id+1}.jpg`} alt={img.caption} key={img.imgSrc} className="object-cover h-96 w-min mx-auto brightness-50" /> )}
+        
       <button
         onClick={()=>handleNext()}
-        className="absolute top-1/2 right-0 mx-4 text-stone-50"
+        className="absolute top-1/2 right-0 mx-8 text-stone-50 z-10"
       >
         <HiChevronRight />
       </button>
-    </div>
+      </div>
+
+      <p className=" font-poppins text-xl sm:text-4xl xl:text-5xl 2xl:text-6xl text-center font-semibold absolute top-40 left-1/2 text-stone-50 -translate-x-1/2 ">
+      <p className=" text-[0.5rem] md:text-xl sm:text-sm  xl:font-semibold uppercase font-[400]">
+        {imgSlides[currentImg].title}
+      </p>
+        {imgSlides[currentImg].caption}
+      </p>
+
+          </>
+   
   );
 }
 

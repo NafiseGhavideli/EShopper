@@ -1,8 +1,8 @@
 import { HiMiniMapPin,HiMiniEnvelope, HiMiniPhone} from "react-icons/hi2";
 function ShopDetails() {
   return (
-    <div className="flex font-poppins items-center leading-8 justify-around mt-20">
-      <p className=" basis-1/2"><h2 className=" text-4xl font-bold mb-4">Contact Us</h2>
+    <div className="flex md:flex-row flex-col gap-8  font-poppins items-center leading-8 justify-around mt-20">
+      <p className="md:basis-1/2"><h2 className=" text-4xl font-bold mb-4">Contact Us</h2>
        At EShopper, we're your one-stop shop for expressing yourself and staying connected.
        We offer a curated selection of stylish clothing and accessories to suit every taste,
         from everyday essentials to statement pieces. Find the perfect outfit to elevate your

@@ -11,7 +11,7 @@ function Filter({filterField,options}) {
   }
   return (
     <div>
-      {options.map(option=><div key={option.value} className="flex gap-3 items-center font-poppins text-lg font-medium mb-2">
+      {options.map(option=><div key={option.value} className="flex gap-3 items-center font-poppins lg:text-sm sm:text-base mb-2">
         <input type="checkbox" value={option.value}
          onChange={()=>handleClick(option.value) }
          checked={option.value === currentFilter} 

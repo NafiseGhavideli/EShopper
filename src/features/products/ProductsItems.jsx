@@ -19,7 +19,7 @@ function ProductsItems() {
   }
 
   return (
-    <ul className="grid grid-cols-3 gap-x-24 gap-y-6 grow">
+    <ul className="grid sm:grid-cols-3 grid-cols-2 gap-x-10 lg:gap-x-12 gap-y-6 sm:grow ">
       { filteredItems? filteredItems.map((item) => (
         <ProductsItem item={item} key={item.id} />
       )): <Empty/>}

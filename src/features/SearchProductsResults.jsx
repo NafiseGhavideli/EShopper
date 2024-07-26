@@ -11,7 +11,7 @@ function SearchProductsResults() {
   products.map(item=>item.title.toLowerCase().includes(query) && items.push(item))
 
   return (
-    <div className="grid grid-cols-4 gap-x-24 gap-y-6 grow" >
+    <div className="grid md:grid-cols-4 grid-cols-2 md:gap-x-24 gap-x-12 gap-y-6 grow" >
      
      {items && items.map(item=><ProductsItem item={item} key={item.id}/>)}
 

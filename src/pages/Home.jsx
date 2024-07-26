@@ -8,9 +8,8 @@ function Home() {
   const isLoading = navigation.state === "loading";
 
   return (
-    <div className="flex gap-10 ">
+    <div className="relative">
       {isLoading && <Loader />}
-      <div className="basis-1/3"></div>
       <HomeContent />
      
     </div>
