@@ -12,8 +12,8 @@ function ProductsSidebar() {
     <div className="lg:hidden border p-2 rounded-md border-neutral-200" onClick={()=>setIsFilterOpen(!isFilterOpen)}>
     {isFilterOpen ?<HiOutlineXMark  size={"1.5rem"} />:<HiOutlineFilter size={"1.5rem"} />}</div> 
     
-      <div className={`${!isFilterOpen&&"hidden "} p-3 lg:block`}>
-        <h5 className="font-poppins font-semibold md:text-2xl lg:text-xl mb-4">
+      <div className={`${!isFilterOpen&&"hidden "} mx-6 my-4 lg:block`}>
+        <h5 className="font-poppins font-semibold md:text-2xl  mb-4">
           Filter by price
         </h5>
         <Filter

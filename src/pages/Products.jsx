@@ -11,7 +11,7 @@ function Products() {
   return (
     <>
       {isLoading && <Loader />}
-      <div className="flex gap-10 justify-between lg:flex-row xsm:flex-col" >
+      <div className="flex justify-between lg:flex-row xsm:flex-col" >
         <ProductsSidebar />
         <ProductsItems />
       </div>

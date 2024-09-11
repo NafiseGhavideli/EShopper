@@ -20,7 +20,7 @@ function Navigation() {
       <Link to="/products" className="tracking-widest" onClick={()=>setIsNavOpen(!isNavOpen)}>
         Products
       </Link>
-      <Link to="/cart" className="tracking-widest " onClick={()=>setIsNavOpen(!isNavOpen)}>
+      <Link to="/cart" className="tracking-widest mr-3" onClick={()=>setIsNavOpen(!isNavOpen)}>
         Shopping Cart
       </Link>
       <Link to="/shopdetails" className="tracking-widest" onClick={()=>setIsNavOpen(!isNavOpen)}>
