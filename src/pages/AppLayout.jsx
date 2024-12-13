@@ -5,7 +5,7 @@ import Header from "./Header";
 
 function AppLayout() {
   return (
-    <div className="bg-neutral-50 lg:px-14 min-h-screen pt-4 px-9 relative">
+    <div className="bg-neutral-50 lg:px-14 min-h-screen px-9 relative">
       <Header/>
       <Outlet />
     </div>

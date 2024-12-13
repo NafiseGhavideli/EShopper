@@ -9,8 +9,8 @@ import UserLogo from "../ui/UserLogo";
 function Header() {
 
   return (
-    <div className="my-8 lg:px-6 md:px-3">
-      <div className="flex items-center xsm:mb-16 gap-x-5 md:gap-x-20 justify-between">
+    <div className="py-6 lg:px-6 md:px-3">
+      <div className="flex items-center xsm:mb-12 gap-x-5 md:gap-x-20 justify-between">
         <Logo />
         <SearchProducts />
         <div className="xsm:hidden lg:flex items-center justify-between gap-3">  

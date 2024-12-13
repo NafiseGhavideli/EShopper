@@ -17,15 +17,15 @@ function HomeContent() {
 
   return (
     <>
-      <div>
+      <div className="relative" >
       <button
         onClick={()=>handlePrev()}
-        className="absolute top-1/2 mx-8 text-stone-50 z-10">
+        className="absolute top-1/2 left-0 mx-8 text-stone-50 z-10">
         <HiChevronLeft />
       </button>
 
 
-        {imgSlides.map((img) => img.id ===currentImg &&<img src={`/carousel-${img.id+1}.jpg`} alt={img.caption} key={img.imgSrc} className="object-cover h-96 w-min mx-auto brightness-50" /> )}
+        {imgSlides.map((img) => img.id ===currentImg &&<img src={`/carousel-${img.id+1}.jpg`} alt={img.caption} key={img.imgSrc} className="object-cover h-96 w-full brightness-50" /> )}
         
       <button
         onClick={()=>handleNext()}
@@ -33,7 +33,6 @@ function HomeContent() {
       >
         <HiChevronRight />
       </button>
-      </div>
 
       <p className=" font-poppins text-xl sm:text-4xl xl:text-5xl 2xl:text-6xl text-center font-semibold absolute top-40 left-1/2 text-stone-50 -translate-x-1/2 ">
       <p className=" text-[0.5rem] md:text-xl sm:text-sm  xl:font-semibold uppercase font-[400]">
@@ -41,6 +40,7 @@ function HomeContent() {
       </p>
         {imgSlides[currentImg].caption}
       </p>
+      </div>
 
           </>
    
